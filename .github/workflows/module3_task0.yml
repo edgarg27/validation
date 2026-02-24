@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       # Paso 1: Clonar el código del repositorio en el servidor de GitHub
       - name: Checkout code
