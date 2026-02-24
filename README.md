@@ -15,3 +15,6 @@ El ciclo de vida del desarrollo se gestiona a través de nuestro `Makefile`:
 
 ## Build Workflow
 El flujo de trabajo `u3_tarea1` instala automáticamente las dependencias necesarias mediante `setup.sh` y luego ejecuta en secuencia las validaciones: lint (usando shellcheck), build, unit-tests, validate e integration-tests.
+
+## Continuous Delivery
+El flujo de trabajo `u3_tarea2` implementa la entrega continua empaquetando la aplicación en un archivo ZIP (`awesome-website.zip`) mediante el objetivo `make package`. Este archivo se archiva automáticamente como un artefacto en GitHub Actions cuando los cambios se fusionan en la rama principal.

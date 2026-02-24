@@ -1,0 +1,45 @@
+name: u3_tarea2
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: bash setup.sh
+
+      - name: Run lint
+        run: make lint
+
+      - name: Run build
+        run: make build
+
+      - name: Run unit tests
+        run: make unit-tests
+
+      - name: Run validate
+        run: make validate
+
+      - name: Run integration tests
+        run: make integration-tests
+
+      # NUEVO: Generar el paquete ZIP
+      - name: Package application
+        run: make package
+
+      # NUEVO: Subir el artefacto SOLO si estamos en la rama main
+      - name: Upload Artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v3
+        with:
+          name: awesome-website
+          path: awesome-website.zip
