@@ -24,3 +24,7 @@ El flujo de trabajo `u3_tarea1` instala automáticamente las dependencias necesa
 ## Continuous Delivery
 
 El flujo de trabajo `u3_tarea2` implementa la entrega continua empaquetando la aplicación en un archivo ZIP (`awesome-website.zip`) mediante el objetivo `make package`. Este archivo se archiva automáticamente como un artefacto en GitHub Actions cuando los cambios se fusionan en la rama principal.
+
+## Automated Releases
+
+El flujo de trabajo `u3_tarea3` automatiza la creación de versiones (Releases) en GitHub. Al empujar una etiqueta (tag) de Git, se crea un Release oficial que incluye el archivo `awesome-website.zip` y el contenido de `DEPLOY.md` como notas de la versión.
