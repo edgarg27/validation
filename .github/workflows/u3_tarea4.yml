@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-  pull_request:  # <-- NUEVO DISPARADOR
-  tags:
-    - '*'
+    tags:
+      - '*'
+  pull_request:
   schedule:
     - cron: '0 0 * * *'
 
