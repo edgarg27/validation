@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Tec-Net S.A."
+theme = "ananke"
+publishDir = "dist"
