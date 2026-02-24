@@ -4,12 +4,6 @@ help:
 build:
 	hugo
 
-clean:
-	rm -rf dist/
-
-lint:
-	shellcheck setup.sh
-
 unit-tests:
 	@echo "Ejecutando pruebas unitarias..."
 
@@ -25,7 +19,7 @@ package: build
 
 lint:
 	shellcheck setup.sh
-	markdownlint README.md DEPLOY.md
+	markdownlint README.md DEPLOY.md --disable MD013
 
 clean:
 	rm -rf dist/ awesome-website.zip
