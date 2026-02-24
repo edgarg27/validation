@@ -1,0 +1,21 @@
+name: module3_task0
+on:
+  # Se ejecuta cada vez que subes código a main
+  push:
+    branches:
+      - main
+  # Se ejecuta todos los días a las 00:00 UTC
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      # Paso 1: Clonar el código del repositorio en el servidor de GitHub
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Paso 2: Ejecutar el comando help de tu Makefile
+      - name: Run make help
+        run: make help
