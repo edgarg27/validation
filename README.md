@@ -12,3 +12,6 @@ El ciclo de vida del desarrollo se gestiona a través de nuestro `Makefile`:
 * **make clean**: Elimina el directorio `dist/` generado.
 * **make post POST_NAME="nombre" POST_TITLE="Titulo"**: Genera automáticamente un nuevo artículo de blog.
 * **make help**: Muestra el menú de ayuda.
+
+## Build Workflow
+El flujo de trabajo `u3_tarea1` instala automáticamente las dependencias necesarias mediante `setup.sh` y luego ejecuta en secuencia las validaciones: lint (usando shellcheck), build, unit-tests, validate e integration-tests.
