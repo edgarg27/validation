@@ -1,20 +1,14 @@
-# Mi Proyecto de Sitio Web Estático (Hugo)
+# Tec-Net S.A. Website
 
-Este proyecto es parte de la formación en DevOps. Utiliza **Go-Hugo** para la generación del sitio y **Make** para la automatización de tareas.
+## Prerequisites
+Para poder construir este sitio web necesitas:
+* Go-Hugo v0.80+
+* GNU Make v3.81+
+* Un entorno de terminal compatible con Unix
 
-## Requisitos
-- Hugo (Extended version)
-- Make
-- Ubuntu 18.04
-
-## Instrucciones de uso
-- `make help`: Muestra los comandos disponibles.
-- `make build`: Genera el sitio web en la carpeta `dist/`.
-
-## Workflow
-Este proyecto utiliza **GitHub Actions** para la Integración Continua.
-El flujo de trabajo `module3_task0` se encarga de:
-1. Clonar el repositorio.
-2. Ejecutar `make help` para validar que el entorno y el Makefile están configurados correctamente.
-
-Se ejecuta automáticamente en cada `push` a la rama `main` y diariamente a la medianoche.
+## Lifecycle
+El ciclo de vida del desarrollo se gestiona a través de nuestro `Makefile`:
+* **make build**: Genera los archivos estáticos HTML/CSS en el directorio `dist/`.
+* **make clean**: Elimina el directorio `dist/` generado.
+* **make post POST_NAME="nombre" POST_TITLE="Titulo"**: Genera automáticamente un nuevo artículo de blog.
+* **make help**: Muestra el menú de ayuda.
