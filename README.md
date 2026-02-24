@@ -28,3 +28,7 @@ El flujo de trabajo `u3_tarea2` implementa la entrega continua empaquetando la a
 ## Automated Releases
 
 El flujo de trabajo `u3_tarea3` automatiza la creación de versiones (Releases) en GitHub. Al empujar una etiqueta (tag) de Git, se crea un Release oficial que incluye el archivo `awesome-website.zip` y el contenido de `DEPLOY.md` como notas de la versión.
+
+## Pull Requests & Release Drafter
+
+El flujo de trabajo `u3_tarea4` valida el código en las Pull Requests antes de integrarlo. Además, `release_drafter` genera automáticamente las notas de la próxima versión basándose en los PRs fusionados.
