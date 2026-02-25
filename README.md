@@ -32,3 +32,7 @@ El flujo de trabajo `u3_tarea3` automatiza la creación de versiones (Releases) 
 ## Pull Requests & Release Drafter
 
 El flujo de trabajo `u3_tarea4` valida el código en las Pull Requests antes de integrarlo. Además, `release_drafter` genera automáticamente las notas de la próxima versión basándose en los PRs fusionados.
+
+## Continuous Deployment
+
+El flujo de trabajo `u3_tarea5` implementa el despliegue continuo (CD) integrando Netlify. Al hacer push a la rama principal, el sitio se publica automáticamente en producción. En los Pull Requests, se genera un entorno de vista previa (preview).
