@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
+    tags:
+      - '*'
   pull_request:
-  tags:
-    - '*'
   schedule:
     - cron: '0 0 * * *'
 
